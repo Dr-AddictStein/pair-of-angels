@@ -4,9 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 function Navbar() {
 
   return (
-    <div className="relative">
-      Navbar
-    </div>
+    <></>
   );
 }
 
