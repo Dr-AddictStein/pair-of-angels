@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import topbg from '../Assets/Our Services/Top Part.avif';
 import logo from '../Assets/Our Services/Transparent Logo (2).png';
 import img1 from '../Assets/Our Services/Our Services Phone.png'
@@ -16,11 +16,32 @@ import cc from '../Assets/Our Services/Competitive Commission.png'
 import mic from '../Assets/Our Services/Community Engagement - Copy.png'
 import bottombg from '../Assets/Our Services/Bottom Part Fade.png'
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 
 
 const services = () => {
+
+    const [email,setEmail]=useState("");
+
+    const handleSubmit = async(e)=>{
+        e.preventDefault();
+
+        try {
+            const response = await axios.post('http://localhost:4000/news-letter', {
+                to: email,
+                subject: 'Subscription Confirmation',
+                text: 'Thank you for subscribing to our newsletter!'
+            });
+            console.log('Email sent successfully:', response.data);
+        } catch (error) {
+            console.error('Error sending email:', error);
+        }
+    }
+
+
+
     return (
         <>
             <div
@@ -287,10 +308,14 @@ const services = () => {
                                 id="email"
                                 className="p-2 rounded-lg bg-white text-black w-full max-w-md"
                                 placeholder="Enter your email address"
+                                value={email}
+                                onChange={(e)=>{
+                                    setEmail(e.target.value);
+                                }}
                             />
                         </div>
                         <div className="flex justify-center pt-6">
-                            <Link className='bg-[#b60302] rounded-full px-6 py-3 text-xl   hover:bg-black text-white transition duration-200 w-[40%] text-center' to='/services'>
+                            <Link className='bg-[#b60302] rounded-full px-6 py-3 text-xl   hover:bg-black text-white transition duration-200 w-[40%] text-center' to='/services' onClick={handleSubmit}>
                                 Submit
                             </Link>
                         </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import topbg from '../Assets/Contact Us!/Top Part (1).avif';
 import logo from '../Assets/Our Services/Transparent Logo (2).png';
 import bottombg from '../Assets/Contact Us!/Bottom Part Fade (1).png';
+import axios from 'axios';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/send-email', {
+            const response = await axios.post('http://localhost:4000/contact-us', {
                 ...formData
             });
             console.log('Email sent successfully:', response.data);
