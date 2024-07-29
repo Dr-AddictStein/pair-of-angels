@@ -18,14 +18,11 @@ import bottombg from '../Assets/Our Services/Bottom Part Fade.png'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+const Services = () => {
 
+    const [email, setEmail] = useState("");
 
-
-const services = () => {
-
-    const [email,setEmail]=useState("");
-
-    const handleSubmit = async(e)=>{
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
@@ -40,10 +37,8 @@ const services = () => {
         }
     }
 
-
-
     return (
-        <>
+        <div className="animate-fade-in-down">
             <div
                 className="h-[70vh] bg-cover bg-center relative"
                 style={{ backgroundImage: `url('${topbg}')` }}
@@ -61,13 +56,12 @@ const services = () => {
                     <div className="flex text-center justify-center text-white text-2xl font-bold ">
                         <div className="max-w-3xl">
                             <p>At Pairofangels, we’re dedicated to providing unparalleled value to our members at every turn. Our commitment goes beyond merely satisfying desires; it’s about enriching lives through an extraordinary blend of premium content, innovative features, and personalised experiences. Read below for more information of some of the values we provide to our premium members.</p>
-
                         </div>
                     </div>
                 </div>
             </div>
             <div className="h-[15vh] bg-gradient-to-b from-[#c90202] to-[#b60302]"></div>
-            <div className="bg-[#b60302] pb-10 ">
+            <div className="bg-[#b60302] pb-10">
                 <div className="container mx-auto max-w-[1200px] flex justify-center text-white">
                     <div className="flex flex-col gap-24">
                         <div className="grid grid-cols-10">
@@ -75,7 +69,7 @@ const services = () => {
                                 <div className="flex gap-5 flex-col mt-5">
                                     <h4 className='text-4xl font-bold'>1) Privacy and Security!</h4>
                                     <h3 className='text-2xl font-bold'>Your privacy and security matters to us!</h3>
-                                    <p className='text-2xl '>At PairofAngels, your privacy and security are our top priorities whether you're a valued member or perhaps one of our valued content creators. We understand that financial security and overall discretion is paramount when it comes to enjoying or producing adult content, which is why we’ve implemented state-of-the-art security measures to safeguard your information. Our goal is to protect your financial information and your overall identity while using our platform!</p>
+                                    <p className='text-2xl'>At PairofAngels, your privacy and security are our top priorities whether you're a valued member or perhaps one of our valued content creators. We understand that financial security and overall discretion is paramount when it comes to enjoying or producing adult content, which is why we’ve implemented state-of-the-art security measures to safeguard your information. Our goal is to protect your financial information and your overall identity while using our platform!</p>
                                 </div>
                             </div>
                             <div className="col-span-5">
@@ -87,14 +81,14 @@ const services = () => {
                         <div className="grid grid-cols-10">
                             <div className="col-span-5">
                                 <div className="flex justify-start">
-                                    <img src={img2} alt="" className='w-[80%] ' />
+                                    <img src={img2} alt="" className='w-[80%]' />
                                 </div>
                             </div>
                             <div className="col-span-5">
                                 <div className="flex gap-5 flex-col mt-5">
                                     <h4 className='text-4xl font-bold'>2) Competitive Pricing! </h4>
                                     <h3 className='text-2xl font-bold'>Stop paying for more money for less quality!</h3>
-                                    <p className='text-2xl '>Here at PairofAngels, we understand the value of your entertainment budget. That’s why we pride ourselves on offering competitive pricing without compromising on quality content. We believe that everyone deserves access to premium adult entertainment without breaking the bank. There isn’t another platform that compete against our pricing!</p>
+                                    <p className='text-2xl'>Here at PairofAngels, we understand the value of your entertainment budget. That’s why we pride ourselves on offering competitive pricing without compromising on quality content. We believe that everyone deserves access to premium adult entertainment without breaking the bank. There isn’t another platform that compete against our pricing!</p>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +98,7 @@ const services = () => {
                                     <h4 className='text-4xl font-bold'>
                                         3) No annoying Pop-Ups!</h4>
                                     <h3 className='text-2xl font-bold'>Experience a smooth and secure browsing experience!</h3>
-                                    <p className='text-2xl '>At PairofAngels, we value your browsing experience above all else. We recognize the inconveniences associated with adult content on other sites, which is why we ensure our members enjoy a forced ad-free experience without any intrusive pop-ups or redirects. Discover a premium adult website where your experience is free from malware, annoying pop-ups, or forced advertisements. Enjoy smooth and secure browsing tailored for our members' satisfaction.</p>
+                                    <p className='text-2xl'>At PairofAngels, we value your browsing experience above all else. We recognize the inconveniences associated with adult content on other sites, which is why we ensure our members enjoy a forced ad-free experience without any intrusive pop-ups or redirects. Discover a premium adult website where your experience is free from malware, annoying pop-ups, or forced advertisements. Enjoy smooth and secure browsing tailored for our members' satisfaction.</p>
                                 </div>
                             </div>
                             <div className="col-span-5">
@@ -116,14 +110,14 @@ const services = () => {
                         <div className="grid grid-cols-10">
                             <div className="col-span-5">
                                 <div className="flex justify-start">
-                                    <img src={img4} alt="" className='w-[80%] ' />
+                                    <img src={img4} alt="" className='w-[80%]' />
                                 </div>
                             </div>
                             <div className="col-span-5">
                                 <div className="flex gap-5 flex-col mt-5">
                                     <h4 className='text-4xl font-bold'>4) Community Engagement! </h4>
                                     <h3 className='text-2xl font-bold'>Enjoy a great experience with us today!</h3>
-                                    <p className='text-2xl '>At PairofAngels, we’re more than just a platform for adult content – we’re a vibrant community where members come together to connect, explore, and indulge in their passions with our models, our moderators as well as fellow members of PairofAngels! Our commitment to fostering a welcoming and engaging environment sets us apart in the industry!</p>
+                                    <p className='text-2xl'>At PairofAngels, we’re more than just a platform for adult content – we’re a vibrant community where members come together to connect, explore, and indulge in their passions with our models, our moderators as well as fellow members of PairofAngels! Our commitment to fostering a welcoming and engaging environment sets us apart in the industry!</p>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +126,7 @@ const services = () => {
                                 <div className="flex gap-5 flex-col mt-5">
                                     <h4 className='text-4xl font-bold'>5) Higher Quality Models!</h4>
                                     <h3 className='text-2xl font-bold'>We only want to provide you the highest of quality!</h3>
-                                    <p className='text-2xl '>At PairofAngels, we strongly believe that quality is paramount, especially when it comes to our angels. That’s why we’re committed to featuring only the most beautiful and professional individuals in the industry. Our rigorous selection process ensures that every angel we showcase possesses not only physical beauty but also charisma, charm, and a genuine passion for their work!</p>
+                                    <p className='text-2xl'>At PairofAngels, we strongly believe that quality is paramount, especially when it comes to our angels. That’s why we’re committed to featuring only the most beautiful and professional individuals in the industry. Our rigorous selection process ensures that every angel we showcase possesses not only physical beauty but also charisma, charm, and a genuine passion for their work!</p>
                                 </div>
                             </div>
                             <div className="col-span-5">
@@ -144,14 +138,14 @@ const services = () => {
                         <div className="grid grid-cols-10">
                             <div className="col-span-5">
                                 <div className="flex justify-start">
-                                    <img src={img6} alt="" className='w-[90%] ' />
+                                    <img src={img6} alt="" className='w-[90%]' />
                                 </div>
                             </div>
                             <div className="col-span-5">
                                 <div className="flex gap-5 flex-col mt-5">
                                     <h4 className='text-4xl font-bold'>6) Live Stream Services!</h4>
                                     <h3 className='text-2xl font-bold'>Experience live streaming like never before as a member!</h3>
-                                    <p className='text-2xl '>At PairofAngels, we understand our members crave a live experience. Which is why we offer an unparalleled experience for those seeking intimate encounters and thrilling live performances. With our diverse range of angels and performers, members can indulge in their wildest fantasies live and direct from the comfort of their own homes. We offer high-quality streaming services, allowing members to connect with our beautiful angels in real-time by joining a public live stream or perhaps a private show while enjoying exclusive content tailored to their preferences.</p>
+                                    <p className='text-2xl'>At PairofAngels, we understand our members crave a live experience. Which is why we offer an unparalleled experience for those seeking intimate encounters and thrilling live performances. With our diverse range of angels and performers, members can indulge in their wildest fantasies live and direct from the comfort of their own homes. We offer high-quality streaming services, allowing members to connect with our beautiful angels in real-time by joining a public live stream or perhaps a private show while enjoying exclusive content tailored to their preferences.</p>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +155,7 @@ const services = () => {
                                     <h4 className='text-4xl font-bold'>
                                         7) Product Offers!</h4>
                                     <h3 className='text-2xl font-bold'>Get your hands on some of the products!</h3>
-                                    <p className='text-2xl '>We understand that our beloved members crave more than just digital content. That’s why we take great pride in offering a curated selection of merchandise and even products worn by our stunning angels featured on our platform. We believe that every purchase should be an unforgettable experience, a chance to elevate yourself in the world of pleasure and indulgence!</p>
+                                    <p className='text-2xl'>We understand that our beloved members crave more than just digital content. That’s why we take great pride in offering a curated selection of merchandise and even products worn by our stunning angels featured on our platform. We believe that every purchase should be an unforgettable experience, a chance to elevate yourself in the world of pleasure and indulgence!</p>
                                 </div>
                             </div>
                             <div className="col-span-5">
@@ -173,18 +167,17 @@ const services = () => {
                         <div className="grid grid-cols-10">
                             <div className="col-span-5">
                                 <div className="flex justify-start">
-                                    <img src={img8} alt="" className='w-[90%] ' />
+                                    <img src={img8} alt="" className='w-[90%]' />
                                 </div>
                             </div>
                             <div className="col-span-5">
                                 <div className="flex gap-5 flex-col mt-5">
                                     <h4 className='text-4xl font-bold'>8) Positive User Experience!</h4>
                                     <h3 className='text-2xl font-bold'>Enjoy a great experience as a member at PairofAngels!</h3>
-                                    <p className='text-2xl '>From the moment you land on our site, you’ll be greeted by a sleek, user-friendly and technologically advanced interface designed to make finding your favourite content as well as new content very easy! Our advanced search and filtering options ensure that you can quickly discover exactly what you’re looking for, whether it’s a specific angel, category, or fetish!</p>
+                                    <p className='text-2xl'>From the moment you land on our site, you’ll be greeted by a sleek, user-friendly and technologically advanced interface designed to make finding your favourite content as well as new content very easy! Our advanced search and filtering options ensure that you can quickly discover exactly what you’re looking for, whether it’s a specific angel, category, or fetish!</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -192,7 +185,7 @@ const services = () => {
                 <img src={oscompbg} alt="" />
             </div>
 
-            <div className="bg-[#b60302] py-10 ">
+            <div className="bg-[#b60302] py-10">
                 <div className="container mx-auto max-w-[1200px] flex justify-center text-white">
                     <div className="flex flex-col gap-24">
                         <div className="grid grid-cols-10">
@@ -213,10 +206,9 @@ const services = () => {
                                     </div>
                                     <div className="grid grid-cols-5">
                                         <div className="col-span-1">
-
                                         </div>
                                         <div className="col-span-4 bg-opacity-25 bg-black">
-                                            <p className='text-xl p-4 text-center '>Creators and agencies alike can set their desired pricing, accept in-chat tokens, and sell physical, live streams, digital products, etc... via built-in storefronts here at Pairofangels!</p>
+                                            <p className='text-xl p-4 text-center'>Creators and agencies alike can set their desired pricing, accept in-chat tokens, and sell physical, live streams, digital products, etc... via built-in storefronts here at Pairofangels!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -231,10 +223,9 @@ const services = () => {
                                     </div>
                                     <div className="grid grid-cols-5">
                                         <div className="col-span-1">
-
                                         </div>
                                         <div className="col-span-4 bg-opacity-25 bg-black">
-                                            <p className='text-xl p-4 text-center '>Here at Pairofangels we want to take care of our content creators! Our adult content website offers content creators an 85% commission for their digital content, a highly competitive rate compared to other platforms!</p>
+                                            <p className='text-xl p-4 text-center'>Here at Pairofangels we want to take care of our content creators! Our adult content website offers content creators an 85% commission for their digital content, a highly competitive rate compared to other platforms!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -244,15 +235,14 @@ const services = () => {
                                             <img src={mic} alt="" className='w-[50px]' />
                                         </div>
                                         <div className="col-span-4">
-                                            <h4 className='text-2xl font-bold text-center bg-opacity-25 bg-black py-2'>2) Competitive Commission!</h4>
+                                            <h4 className='text-2xl font-bold text-center bg-opacity-25 bg-black py-2'>3) Community Engagement!</h4>
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-5">
                                         <div className="col-span-1">
-
                                         </div>
                                         <div className="col-span-4 bg-opacity-25 bg-black">
-                                            <p className='text-xl p-4 text-center '>Here at Pairofangels we want to take care of our content creators! Our adult content website offers content creators an 85% commission for their digital content, a highly competitive rate compared to other platforms!</p>
+                                            <p className='text-xl p-4 text-center'>At PairofAngels, we’re more than just a platform for adult content – we’re a vibrant community where members come together to connect, explore, and indulge in their passions with our models, our moderators as well as fellow members of PairofAngels! Our commitment to fostering a welcoming and engaging environment sets us apart in the industry!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -309,7 +299,7 @@ const services = () => {
                                 className="p-2 rounded-lg bg-white text-black w-full max-w-md"
                                 placeholder="Enter your email address"
                                 value={email}
-                                onChange={(e)=>{
+                                onChange={(e) => {
                                     setEmail(e.target.value);
                                 }}
                             />
@@ -323,10 +313,8 @@ const services = () => {
                 </div>
 
             </div>
-
-
-        </>
+        </div>
     )
 }
 
-export default services
+export default Services;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import topbg from '../Assets/Contact Us!/Top Part (1).avif';
 import logo from '../Assets/Our Services/Transparent Logo (2).png';
 import bottombg from '../Assets/Contact Us!/Bottom Part Fade (1).png';
@@ -33,7 +33,7 @@ const Contact = () => {
         }
     };
     return (
-        <>
+        <div className="animate-fade-in-down">
             <div
                 className="h-[55vh] bg-cover bg-center relative"
                 style={{ backgroundImage: `url('${topbg}')` }}
@@ -112,7 +112,7 @@ const Contact = () => {
                         <div className="flex justify-center">
                             <button
                                 type="submit"
-                                className="bg-[#c90202] text-white text-lg font-bold py-3 px-6 rounded-full hover:bg-black w-[30%]"
+                                className="bg-[#c90202] text-white text-lg font-bold py-3 px-6 rounded-full hover:bg-black w-[30%] transition duration-200"
                             >
                                 Submit
                             </button>
@@ -121,8 +121,8 @@ const Contact = () => {
 
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
-export default Contact
+export default Contact;
