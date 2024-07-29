@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'edu-hand': ['"Edu Australia VIC WA NT Hand"', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }
